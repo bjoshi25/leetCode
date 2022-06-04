@@ -25,7 +25,7 @@ const slidingwindow = (array, integer) => {
   return averages;
 }
 
-console.log(slidingwindow([1,2,3,4,5], 2));
+console.log(slidingwindow([1,2,3,4,5], 3));
 
 // find the average of all contiguous subarrays of size k in the given array
 // given array = [1,2,3,4,5], and k = 3
