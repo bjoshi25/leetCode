@@ -25,20 +25,19 @@
   // return true
 
   var isSubsequence = function(s, t) {
-    let lengthS = s.length;
-    let lengthT = t.length;
-    let counterS = 0;
-    let counterT = 0;
 
-    while (counterS < lengthS) {
-      while (counterT < lengthT) {
-        if (s[counterS] === t[counterT]) {
-          counterT = 0;
-          counterS++;
-        } else counterT++;
+    let sPointer = 0;
+    let tPointer = 0;
+
+    while (sPointer < s.length && tPointer < t.length) {
+      if (t[tPointer] === s[sPointer]) {
+        sPointer++;
       }
-      if (counterS < lengthS) return false
+      tPointer++
     }
-    return true;
+
+    if (sPointer === s.length ) {
+      return true
+    } else return false
   };
 
