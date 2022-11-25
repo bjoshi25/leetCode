@@ -39,7 +39,7 @@ var middleNodeBasic = function(head) {
   }
 
 };
-
+s
 var middleNodeTwoPointer = function(head) {
 
   let slowPointer = head;
@@ -55,12 +55,13 @@ var middleNodeTwoPointer = function(head) {
 var middleNodeArray = function(head) {
 
   let current = head;
-  let storage = [current];
+  let storage = [];
 
   while (current) {
     storage.push(current);
     current = current.next;
   }
 
-  return storage[storage.length/2];
+  if ((storage.length - 1) % 2 === 0) return storage[(storage.length-1)/2]
+  else return storage[(storage.length/2)]
 };
