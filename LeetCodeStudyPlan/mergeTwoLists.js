@@ -21,13 +21,13 @@
 // Constraints - given lists are ordered in non decreasing order
 // Edge Cases - Null lists
 
- var mergeTwoLists = function(list1, list2) {
+ var mergeTwoListsIterative = function(list1, list2) {
   let mergedList = new ListNode();
 
   let crtNode = mergedList;
 
   while(list1 && list2) {
-    if (list1.val <= list2.val) {
+    if (list1.val < list2.val) {
       crtNode.next = list1;
       list1 = list1.next;
     } else {
@@ -40,6 +40,11 @@
   crtNode.next = list1 || list2;
 
   return mergedList.next;
+};
+
+var mergeTwoListRecursive = function(list1, list2) {
+
+
 };
 
 
