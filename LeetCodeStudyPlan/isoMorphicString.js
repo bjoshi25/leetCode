@@ -39,6 +39,10 @@ var isIsomorphic = function(s, t) {
       } else {
         store[s[i]] = t[i];
       }
+    } else {
+      if (t[i] !== store[s[i]]) {
+        return false;
+      }
     }
 
   } return true;
