@@ -1,3 +1,9 @@
+// given an array and integer K, find the average of all contiguous subarrays of length K.
+
+// Example
+// Array = [1,2,3,4,5], K = 3
+// Result = [(1+2+3)/3, (2+3+4)/3, (3+4+5)/3] = [2,3,4];
+
 let subArrayNaive = (array, k) => {
   let averages = [];
 
